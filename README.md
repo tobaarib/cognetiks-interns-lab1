@@ -86,5 +86,3 @@ lab-1/
   .gitignore
   README.md
 ```
-
-## What You Should Modify
