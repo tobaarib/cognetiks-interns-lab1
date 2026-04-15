@@ -1,5 +1,5 @@
 resource "azurerm_container_app_environment" "starter_app_environment" {
-  name                       = "starter_app_environment"
+  name                       = "starter-app-environment"
   location                   = azurerm_resource_group.starter_app_rg.location
   resource_group_name        = azurerm_resource_group.starter_app_rg.name
   logs_destination           = "log-analytics"
