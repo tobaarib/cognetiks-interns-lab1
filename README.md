@@ -48,8 +48,8 @@ The homepage reads these values at runtime:
 
 5. Open the app:
 
-   - Homepage: [http://localhost:8000](http://localhost:8000)
-   - Health check: [http://localhost:8000/health](http://localhost:8000/health)
+   - Homepage: ![Homepage](images/Starter-App-Screenshot.png)
+   - Health check: ![Health Check](images/Starter-App-Screenshot1.png)
 
 ## Run With Docker
 
@@ -58,12 +58,14 @@ The homepage reads these values at runtime:
    ```bash
    docker build -t lab1-starter-app .
    ```
+   ![Image Build](images/Image-Build.png)
 
-2. Run the container:
+2. Run the container image:
 
    ```bash
    docker run -d -p 8000:8000 lab1-starter-app:latest
    ```
+   ![Container Running](images/Container-Running.png)
 
 3. Open the app:
 
@@ -121,6 +123,11 @@ The homepage reads these values at runtime:
    ```
    ![ACR Image](images/ACR-Image.png)
 
-9. Validate Container Apps Environment:
+9. Validate created Resources:
+   ![Virtual Network](images/virtual-network.png)
+   ![Subnets](images/subnets.png)
+   ![Log Analytics Workspace](images/log.png)
+
+10. Validate Container Apps Environment:
    ![Container Apps Environment](images/Container-Apps-Environment.png)
 
