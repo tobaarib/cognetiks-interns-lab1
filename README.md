@@ -67,5 +67,60 @@ The homepage reads these values at runtime:
 
 3. Open the app:
 
-   - Homepage: [http://localhost:8000](http://localhost:8000)
-   - Health check: [http://localhost:8000/health](http://localhost:8000/health)
+   - Homepage: ![Homepage](images/Starter-App-Screenshot.png)
+   - Health check: ![Health Check](images/Starter-App-Screenshot1.png)
+
+## Infrastructure As Code (Terraform)
+
+1. Enter Terraform directory:
+
+   ```bash
+   cd terraform
+   ```
+
+2. Initialize Terraform:
+
+   ```bash
+   terraform init
+   ```
+
+3. Validate Resources:
+
+   ```bash
+   terraform validate
+   ```
+
+4. Plan Resources:
+
+   ```bash
+   terraform plan
+   ```
+
+5. Apply Resources:
+
+   ```bash
+   terraform apply
+   ```
+
+6. Destroy Resources:
+
+   ```bash
+   terraform destroy
+   ```
+
+7. Docker Image Tag with Azure Container Registry:
+
+   ```bash
+   docker tag lab1-starter-app:latest starterappregistry.azurecr.io/lab1-starter-app:latest
+   ```
+
+8. Docker Image Push to Azure Container Registry:
+
+   ```bash
+   docker push starterappregistry.azurecr.io/lab1-starter-app:latest
+   ```
+   ![ACR Image](images/ACR-Image.png)
+
+9. Validate Container Apps Environment:
+   ![Container Apps Environment](images/Container-Apps-Environment.png)
+
