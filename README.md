@@ -143,10 +143,21 @@ The homepage reads these values at runtime:
 ## Reflection Questions 
 
 - Explain how traffic reaches your container in Azure
+Traffic starts from the users(public internet) and hits the Azure Container Apps load balancer via HTTPS. The load balancer then routes that request to the internal Container App Environment, which finally sends the traffic to your starter app container instance.
+
 - Why must the container port match the ingress configuration?
+The target port acts like a specific door for the starter app container. The Python code is listening on port 8000 but the ingress is looking at another port say port 80, the traffic hits a wall and the app won't load. The two must align so the load balancer knows exactly where to hand off the traffic.
+
 - What issue did you face and how did you resolve it?
+I ran into a "Mixed Content" error where the app loaded but the CSS styling didn't. This happened because the app was trying to load styles over insecure HTTP while the site was on secure HTTPS. I am still trying to resolve the issue.
+
 - What would happen if your image could not be pulled from ACR?
+If Azure can't pull the image from ACR (due to wrong credentials), the deployment will get stuck in a Waiting state or show an ImagePullBackOff error. The app simply won't start and the URL will return a 503 Service Unavailable error.
+
 - Why are environment variables important in this setup?
+Environment variables allow me to keep my Docker image generic. Instead of hardcoding the environmental variable, I can change them in Terraform and have the app update instantly. It makes the setup flexible and secure.
+
 - What would you improve for a production deployment?
+I would move the Terraform State file from my local machine to a Remote Backend (like an encrypted Azure Blob Storage container) with state locking to allow a team to work on the infrastructure safely without corrupting the configuration.
 
 
