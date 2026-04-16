@@ -131,3 +131,22 @@ The homepage reads these values at runtime:
 10. Validate Container Apps Environment:
    ![Container Apps Environment](images/Container-Apps-Environment.png)
 
+11. Validate Container App, Public URL, Active Revision:
+   ![Container App & Public URL](images/Starter-App-Screenshot2.png)
+   ![Active Revision](images/Starter-App-Revision.png)
+
+## Live Application URL
+
+- [Application Page URL](https://starter-app.icyground-5237e7cf.westeurope.azurecontainerapps.io)
+- [Application Health Page URL](https://starter-app.icyground-5237e7cf.westeurope.azurecontainerapps.io/health)
+
+## Reflection Questions 
+
+- Explain how traffic reaches your container in Azure
+- Why must the container port match the ingress configuration?
+- What issue did you face and how did you resolve it?
+- What would happen if your image could not be pulled from ACR?
+- Why are environment variables important in this setup?
+- What would you improve for a production deployment?
+
+
