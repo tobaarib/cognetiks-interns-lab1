@@ -6,3 +6,5 @@ venv/
 *.pyo
 *.pyd
 .terraform/
+*.tfstate
+*.tfstate.backup
