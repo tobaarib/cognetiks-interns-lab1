@@ -38,7 +38,7 @@ resource "azurerm_container_app" "starter-app" {
   template {
     container {
       name   = "startercontainerapp"
-      image  = "starterappregistry.azurecr.io/lab1-starter-app:latest"
+      image  = "starterappregistry.azurecr.io/lab1-starter-app:v1"
       cpu    = 0.5
       memory = "1Gi"
 
